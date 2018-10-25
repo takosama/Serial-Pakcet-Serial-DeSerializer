@@ -6,7 +6,7 @@ public class C
     {
         while (true)
         {
-            var sendData = Console.ReadLine().ToCharArray().Select(x => (byte)x).ToArray();
+            var sendData = System.Text.Encoding.UTF8.GetBytes(Console.ReadLine());
             View(sendData);
         }
     }
